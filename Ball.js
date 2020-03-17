@@ -9,7 +9,6 @@ class Ball{
     this.width = 20;
     this.height = 20;
    
-    this.image = loadImage("sprites/ball.png");
     World.add(world, this.body);
   }
     display(){
@@ -17,8 +16,8 @@ class Ball{
         push();
         translate(this.body.position.x, this.body.position.y);
         rotate(angle);
-        imageMode(CENTER);
-        image(this.image, 0, 0, this.width, this.height);
+        rectMode(CENTER);
+        rect( 0, 0, this.width, this.height);
         pop();
     }
 }
